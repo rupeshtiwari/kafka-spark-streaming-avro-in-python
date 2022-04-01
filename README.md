@@ -1,3 +1,9 @@
+- [Kafka Data Source Spark Streaming Avro Files](#kafka-data-source-spark-streaming-avro-files)
+  - [Environment setup](#environment-setup)
+  - [Running steps](#running-steps)
+    - [Example 1: Publishing 1000 records](#example-1-publishing-1000-records)
+    - [Example 2: Publishing 10 Million records](#example-2-publishing-10-million-records)
+
 ![spark streaming](https://i.imgur.com/aGB9b0S.jpg "spark streaming using Kafka and python") 
 
 # Kafka Data Source Spark Streaming Avro Files
@@ -38,7 +44,7 @@ Note: If you want to continuously generate messages then use
 
 This script will generate `100*10 = 1000` messages. 
 
-**Example 1: Publishing 1000 records**:
+### Example 1: Publishing 1000 records
 
 ![](https://i.imgur.com/EHL9GIv.png)
 
@@ -46,7 +52,7 @@ This script will generate `100*10 = 1000` messages.
 
 ![](https://i.imgur.com/otFScqS.png)
 
-**Example 2: Publishing 10 Million records** 
+### Example 2: Publishing 10 Million records
 
 ![](https://i.imgur.com/6DjBNB6.png "Publishing 10m records")
 
