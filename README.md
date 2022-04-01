@@ -29,3 +29,5 @@ Most important thing is to match the version this sample is working with below v
 2. Run kafka server `02-start-kafka.sh`
 3. Run `python3 producer.py`
 4. Run `spark-submit streaming.py`
+
+Check the job analytics at spark context UI at http://localhost:4040/jobs/ 
