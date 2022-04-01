@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "Person",
+  "namespace": "com.rupesh.spark.example.types",
+  "fields": [
+    {"name": "id","type": ["int", "null"]},
+    {"name": "firstname","type": ["string", "null"]}
+  ]
+}
