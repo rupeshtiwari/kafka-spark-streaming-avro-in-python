@@ -35,7 +35,7 @@ if __name__ == "__main__":
         .option("checkpointLocation", "../chk-point-dir") \
         .option("path", "../output") \
         .outputMode("append") \
-        .trigger(processingTime="20 seconds") \
+        .trigger(processingTime="5 seconds") \
         .start()
 
     # Stream Processing application will only terminate when you Manual Stop or Kill or Exception & shut down gracefully

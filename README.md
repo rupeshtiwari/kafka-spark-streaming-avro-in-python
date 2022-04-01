@@ -3,6 +3,9 @@
   - [Running steps](#running-steps)
     - [Example 1: Publishing 1000 records](#example-1-publishing-1000-records)
     - [Example 2: Publishing 10 Million records](#example-2-publishing-10-million-records)
+  - [How to visualize Parquet file data](#how-to-visualize-parquet-file-data)
+  - [On Error](#on-error)
+  - [How to know how many messages are on broker server](#how-to-know-how-many-messages-are-on-broker-server)
 
 ![spark streaming](https://i.imgur.com/aGB9b0S.jpg "spark streaming using Kafka and python") 
 
@@ -61,3 +64,23 @@ This script will generate `100*10 = 1000` messages.
 Created 20MB file each when I run every 20 seconds  
 
 ![](https://i.imgur.com/IVciW1l.png)
+
+## How to visualize Parquet file data
+In order to view the Parquet file in your visual studio code use this extension i, install it and then use to visualize the file data https://marketplace.visualstudio.com/items?itemName=dvirtz.parquet-viewer
+
+
+## On Error 
+The beauty of spark streaming is that it uses the check point directory to save the metadata about the offset. So incase if you crash the streaming process and restart it again. Spark will start streaming from the point it left before crash. So it is fault tolerant & comes with no data loss feature! 
+
+## How to know how many messages are on broker server 
+In order to know how many messages are on queue do below.
+
+1. Navigate to Kafka folder first `cd ~/kafka2` Then run any one below script. 
+   
+2. ```sh
+bin/kafka-run-class.sh kafka.admin.ConsumerGroupCommand --group my-group --bootstrap-server localhost:9092 --describe
+OR
+bin/kafka-run-class.sh kafka.admin.ConsumerGroupCommand --bootstrap-server localhost:9092 --describe --all-groups
+```
+
+ ![](https://i.imgur.com/XSekgku.png)
