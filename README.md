@@ -38,11 +38,16 @@ Note: If you want to continuously generate messages then use
 
 This script will generate `100*10 = 1000` messages. 
 
-**Publishing 1000 records**:
+**Example 1: Publishing 1000 records**:
 
 ![](https://i.imgur.com/EHL9GIv.png)
 
 `python3 stream-producer.py --count 1000`
 
 ![](https://i.imgur.com/otFScqS.png)
-**Example publishing 10 Million records**![](https://i.imgur.com/6DjBNB6.p
+
+**Example 2: Publishing 10 Million records** 
+
+![](https://i.imgur.com/6DjBNB6.png "Publishing 10m records")
+
+![](https://i.imgur.com/XGKeI7X.png "File output")
