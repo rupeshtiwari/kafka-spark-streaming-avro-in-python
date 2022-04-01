@@ -18,9 +18,11 @@
 
 Most important thing is to match the version this sample is working with below versions. Make sure you have that version only before running scripts.
 
-- Install python I have python `v3.9`
+- Install python, I have python `v3.9`
 - Install `confluent_kafka` here is the script `pip install confluent_kafka` 
   ![](https://i.imgur.com/5CfyhFw.png)
+- Since I am using Avro files. You have to install `avro` package.   
+- Install `avro` package `pip3 install avro` So that in python code you can use `avro` package. You can use pip if u r using `bash`. If you are using `.zshrc` then use `pip3`
 - Add below line entry in `spark-3.2.1-bin-hadoop3.2/conf/spark-defaults.conf` file.
   `spark.jars.packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0,org.apache.spark:spark-avro_2.12:3.2.1`
 - Add below lines on `~/.zshrc` file
@@ -32,8 +34,8 @@ Most important thing is to match the version this sample is working with below v
   export KAFKA_HOME=/Users/rupeshti/kafka2
   export PATH=$PATH:$KAFKA_HOME/bin
   ```
-- Install `avro` package `pip3 install avro` so that in python code you can use `avro` package.
-- Install `confluent_kafka` we are using to produce events in Kafka
+
+ 
 
 ## Running steps
 
