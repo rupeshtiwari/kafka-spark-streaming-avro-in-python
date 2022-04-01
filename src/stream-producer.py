@@ -1,6 +1,7 @@
 """
 Keep producing events continously 
-python3 stream-producer.py --count 1000
+run `python3 stream-producer.py --count 1000 --cycle 10` 
+This will produce `1000*10=10000 events
 """
 import argparse
 import datetime
@@ -85,7 +86,8 @@ if __name__ == '__main__':
     cy = args.cy
     while 1:
         if cy != 0 and cycled >= cy:
-            print('End of data pub - ', str(datetime.datetime.now()))
+            print('End of data pub - ', str(datetime.datetime.now()),
+                  'Message Count - ', cy*msgCount)
             break
 
         cycled += 1
@@ -110,5 +112,3 @@ if __name__ == '__main__':
                 producer.produce(topic=topic, value=msg)
 
         flush(producer)
-
-     

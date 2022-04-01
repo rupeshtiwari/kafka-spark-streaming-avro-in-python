@@ -1,5 +1,7 @@
 """
-python3 producer.py
+Produces single message only
+
+run `python3 producer.py` 
 """
 import argparse
 import io

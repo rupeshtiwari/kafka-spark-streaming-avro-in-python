@@ -36,12 +36,13 @@ Note: If you want to continuously generate messages then use
 
 `python3 stream-producer.py --count 100 --cycle 10`
 
-This script will generate 100*10 = 1000 messages. 
+This script will generate `100*10 = 1000` messages. 
 
-**Example that I run in my machine**:
+**Publishing 1000 records**:
 
 ![](https://i.imgur.com/EHL9GIv.png)
 
 `python3 stream-producer.py --count 1000`
 
 ![](https://i.imgur.com/otFScqS.png)
+**Example publishing 10 Million records**![](https://i.imgur.com/6DjBNB6.p
