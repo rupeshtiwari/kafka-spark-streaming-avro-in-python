@@ -2,7 +2,7 @@
 
 # Kafka Data Source Spark Streaming Avro Files
 
-> We are using python script to produce events on Kafka in Avro format. Next we are using Spark to stream the records from Kafka and read it from Avro format and print on console.
+> We are using python script to produce events on Kafka broker server in Avro format. Next we are using Spark to stream the records from Kafka and read it from Avro format and print on console.
 
 ## Environment setup
 
@@ -31,3 +31,17 @@ Most important thing is to match the version this sample is working with below v
 4. Run `spark-submit streaming.py`
 
 Check the job analytics at spark context UI at http://localhost:4040/jobs/ 
+
+Note: If you want to continuously generate messages then use
+
+`python3 stream-producer.py --count 100 --cycle 10`
+
+This script will generate 100*10 = 1000 messages. 
+
+**Example that I run in my machine**:
+
+![](https://i.imgur.com/EHL9GIv.png)
+
+`python3 stream-producer.py --count 1000`
+
+![](https://i.imgur.com/otFScqS.png)
