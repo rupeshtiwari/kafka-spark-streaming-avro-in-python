@@ -18,7 +18,9 @@
 
 Most important thing is to match the version this sample is working with below versions. Make sure you have that version only before running scripts.
 
-- python `v3.9`
+- Install python I have python `v3.9`
+- Install `confluent_kafka` here is the script `pip install confluent_kafka` 
+  ![](https://i.imgur.com/5CfyhFw.png)
 - Add below line entry in `spark-3.2.1-bin-hadoop3.2/conf/spark-defaults.conf` file.
   `spark.jars.packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0,org.apache.spark:spark-avro_2.12:3.2.1`
 - Add below lines on `~/.zshrc` file
