@@ -1,4 +1,4 @@
-![](https://imgur.com/a/S8yGu27.png)
+![spark streaming](https://i.imgur.com/aGB9b0S.jpg "spark streaming using Kafka and python") 
 
 # Kafka Data Source Spark Streaming Avro Files
 
