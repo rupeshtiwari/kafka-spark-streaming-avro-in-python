@@ -57,3 +57,7 @@ This script will generate `100*10 = 1000` messages.
 ![](https://i.imgur.com/6DjBNB6.png "Publishing 10m records")
 
 ![](https://i.imgur.com/XGKeI7X.png "File output")
+
+Created 20MB file each when I run every 20 seconds  
+
+![](https://i.imgur.com/IVciW1l.png)
