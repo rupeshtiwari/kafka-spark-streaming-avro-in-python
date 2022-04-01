@@ -6,6 +6,7 @@
   - [How to visualize Parquet file data](#how-to-visualize-parquet-file-data)
   - [On Error](#on-error)
   - [How to know how many messages are on broker server](#how-to-know-how-many-messages-are-on-broker-server)
+  - [In Order to purge all messages from Kafka Topic](#in-order-to-purge-all-messages-from-kafka-topic)
 
 ![spark streaming](https://i.imgur.com/aGB9b0S.jpg "spark streaming using Kafka and python") 
 
@@ -75,12 +76,26 @@ The beauty of spark streaming is that it uses the check point directory to save 
 ## How to know how many messages are on broker server 
 In order to know how many messages are on queue do below.
 
-1. Navigate to Kafka folder first `cd ~/kafka2` Then run any one below script. 
-   
-2. ```sh
+Navigate to Kafka folder first `cd ~/kafka2` Then run any one below script. 
+
+ 
+```sh
 bin/kafka-run-class.sh kafka.admin.ConsumerGroupCommand --group my-group --bootstrap-server localhost:9092 --describe
 OR
 bin/kafka-run-class.sh kafka.admin.ConsumerGroupCommand --bootstrap-server localhost:9092 --describe --all-groups
 ```
 
  ![](https://i.imgur.com/XSekgku.png)
+
+ ## In Order to purge all messages from Kafka Topic 
+
+ Temporarily update the retention time on the topic to one second:
+
+```
+bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic avro_topic --config retention.ms=1000
+```
+
+This  script is not working for me though and I see below error
+```
+Exception in thread "main" joptsimple.UnrecognizedOptionException: zookeeper is not a recognized option
+```
