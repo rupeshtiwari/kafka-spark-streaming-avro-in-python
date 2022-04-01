@@ -1,4 +1,4 @@
-- [Kafka Data Source Spark Streaming Avro Files](#kafka-data-source-spark-streaming-avro-files)
+- [Kafka Data Source Spark Streaming Avro Files & Saving in Parquet Format](#kafka-data-source-spark-streaming-avro-files--saving-in-parquet-format)
   - [Environment setup](#environment-setup)
   - [Running steps](#running-steps)
     - [Example 1: Publishing 1000 records](#example-1-publishing-1000-records)
@@ -10,7 +10,7 @@
 
 ![spark streaming](https://i.imgur.com/aGB9b0S.jpg "spark streaming using Kafka and python") 
 
-# Kafka Data Source Spark Streaming Avro Files
+# Kafka Data Source Spark Streaming Avro Files & Saving in Parquet Format
 
 > We are using python script to produce events on Kafka broker server in Avro format. Next we are using Spark to stream the records from Kafka and read it from Avro format and print on console.
 
