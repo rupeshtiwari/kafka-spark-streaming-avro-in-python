@@ -1,4 +1,4 @@
-![](https://imgur.com/a/S8yGu27)
+![](https://imgur.com/a/S8yGu27.png)
 
 # Kafka Data Source Spark Streaming Avro Files
 
