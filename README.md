@@ -23,6 +23,7 @@ Most important thing is to match the version this sample is working with below v
   ![](https://i.imgur.com/5CfyhFw.png)
 - Since I am using Avro files. You have to install `avro` package.   
 - Install `avro` package `pip3 install avro` So that in python code you can use `avro` package. You can use pip if u r using `bash`. If you are using `.zshrc` then use `pip3`
+  ![](https://i.imgur.com/3m1y08Z.png)
 - Add below line entry in `spark-3.2.1-bin-hadoop3.2/conf/spark-defaults.conf` file.
   `spark.jars.packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0,org.apache.spark:spark-avro_2.12:3.2.1`
 - Add below lines on `~/.zshrc` file
