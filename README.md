@@ -7,6 +7,7 @@
   - [On Error](#on-error)
   - [How to know how many messages are on broker server](#how-to-know-how-many-messages-are-on-broker-server)
   - [In Order to purge all messages from Kafka Topic](#in-order-to-purge-all-messages-from-kafka-topic)
+  - [Using AWS MSK](#using-aws-msk)
 
 ![spark streaming](https://i.imgur.com/aGB9b0S.jpg "spark streaming using Kafka and python") 
 
@@ -35,9 +36,6 @@ Most important thing is to match the version this sample is working with below v
   export KAFKA_HOME=/Users/rupeshti/kafka2
   export PATH=$PATH:$KAFKA_HOME/bin
   ```
-
- 
-
 ## Running steps
 
 1. Run zookeeper server `01-start-zookeeper.sh`
@@ -104,3 +102,13 @@ This  script is not working for me though and I see below error
 ```
 Exception in thread "main" joptsimple.UnrecognizedOptionException: zookeeper is not a recognized option
 ```
+
+
+## Using AWS MSK 
+
+If you are using AWS Managed Stream Kafka as your Kafka Broker. Then you need a EC2 instance to produce events. I have created `cloud9` environment and using event producer to produce event. You can do the same. However, make sure you are going to MSK security group and adding the inbound rule to allow all traffic from `cloud9` EC2 instance security group. 
+
+![](https://i.imgur.com/vOpyI2C.png)
+
+I love cloud9 it is basically an EC2 instance pre installed with python,node.js, JAVA etc. Also it gives you an on-line IDE which is very similar to VSCode. I am enjoying a lot with `cloud9` try using it. 
+![](https://i.imgur.com/YUaq9TC.png)
