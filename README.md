@@ -52,6 +52,9 @@ Note: If you want to continuously generate messages then use
 
 This script will generate `100*10 = 1000` messages.
 
+
+`python3 stream-producer.py --count 10 --cycle 1`
+
 ### Example 1: Spark Streaming Kafka Messages to In-Memory Console
 
 - **publisher** script: `python3 stream-producer.py --count 1000 --cycle 1`
@@ -62,7 +65,7 @@ This script will generate `100*10 = 1000` messages.
 ![](https://i.imgur.com/otFScqS.png)
 
 ### Example 2: Spark Streaming 10 million Kafka records to Parquet files
-
+- `cd src`
 - **publisher** script: `python3 stream-producer.py --count 10000 --cycle 1000`
 - **subscriber** script `spark-submit streaming-to-parquet-file.py`
 
