@@ -22,7 +22,15 @@ if __name__ == "__main__":
         .option("startingOffsets", "earliest") \
         .load()
 
-    avroSchema = open('schema/person.avsc', mode='r').read()
+    avroSchema = '''{
+                    "type": "record",
+                    "name": "Person",
+                    "namespace": "com.rupesh.spark.example.types",
+                    "fields": [
+                        {"name": "id","type": ["int", "null"]},
+                        {"name": "firstname","type": ["string", "null"]}
+                    ]
+                    }'''
 
     value_df = kafka_source_df.select(
         (from_avro(col("value"), avroSchema)).alias("value"))
